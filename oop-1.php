@@ -31,6 +31,16 @@
     return $action->doAction($this->firstNumber, $this->secondNumber);
    }
  }
+ 
+
+$multiplication=new CalculatorStrategy(function ($firstNumber,$secondNumber){
+return $firstNumber * $secondNumber;
+});
+
+$object=new Calculator();
+$object->setNumbers(2,5);
+echo $object->calculate($multiplication);
+
 
 
 // تمرین: از این کلاس های بالا طوری استفاده کن که در نهایت ضرب دو عدد در خروجی چاپ بشه
