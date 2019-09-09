@@ -23,23 +23,15 @@
    private $secondNumber;
 
    public function setNumbers($f, $s) {
-    $this->firstNumber =(int)$f;
-    $this->secondNumber =(int)$s;
+    $this->firstNumber = $f;
+    $this->secondNumber = $s;
    }
-   //$calcStrategy=function($firstNumber,$secondNumber){
-	// $this->firstNumber*$this->secondNumber;
-  //};
-   //public function calculate(CalculatorStrategy $action){
-    //return $action->doAction($this->firstNumber, $this->secondNumber);	
-   //}
-   public function getMultiplication(){
-	   return $this->firstNumber*$this->secondNumber;
+
+   public function calculate(CalculatorStrategy $action) {
+    return $action->doAction($this->firstNumber, $this->secondNumber);
    }
  }
 
-$object= new Calculator();
-$object->setNumbers(2,5);
-echo $object->getMultiplication();
 
 // تمرین: از این کلاس های بالا طوری استفاده کن که در نهایت ضرب دو عدد در خروجی چاپ بشه
 
